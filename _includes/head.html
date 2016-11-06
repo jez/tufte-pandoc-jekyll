@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+<meta name="generator" content="pandoc">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="{{ site.author }}">
+{% if page.date %}
+<meta name="dcterms.date" content="{{ page.date }}">
+{% endif %}
+{% if page.keywords %}
+<meta name="keywords" content="{{ page.keywords | join: ' ' }}">
+{% endif %}
+
+<title>{{ page.title }} – {{ site.title }}</title>
+
+
+<!-- TODO(jez): canonical URL -->
+<!-- TODO(jez): OpenGraph tags -->
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/tufte.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/pandoc.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/pandoc-solarized.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/tufte-extra.css">
+
+<!-- -->
+
+{% if page.math %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+{% endif %}
+
+<!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+<![endif]-->
+
+{% if site.header_includes %}
+  {% for header_include in site.header_includes %}
+    {{ header_include }}
+  {% endfor %}
+{% endif %}
+
+{% if page.header_includes %}
+  {% for header_include in page.header_includes %}
+    {{ header_include }}
+  {% endfor %}
+{% endif %}

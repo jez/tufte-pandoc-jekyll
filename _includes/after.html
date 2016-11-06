@@ -1,0 +1,12 @@
+{% if site.include_after %}
+  {% for include_after in site.include_after %}
+    {{ include_after }}
+  {% endfor %}
+{% endif %}
+
+{% if page.include_after %}
+  {% for include_after in page.include_after %}
+    {{ include_after }}
+  {% endfor %}
+{% endif %}
+

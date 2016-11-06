@@ -1,0 +1,12 @@
+{% if site.include_before %}
+  {% for include_before in site.include_before %}
+    {{ include_before }}
+  {% endfor %}
+{% endif %}
+
+{% if page.include_before %}
+  {% for include_before in page.include_before %}
+    {{ include_before }}
+  {% endfor %}
+{% endif %}
+

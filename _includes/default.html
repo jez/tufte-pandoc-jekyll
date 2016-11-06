@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include before.html %}
+
+  <article>
+    {% include header.html %}
+
+    {{ content }}
+
+    {% if page.layout != 'index' %}
+    <section>
+      <p class="signoff"><em><a href="{{ site.baseurl }}/">Return home</a></em></p>
+    </section>
+    {% endif %}
+  </article>
+
+  {% include after.html %}
+  {% include math.html %}
+</body>
+</html>
