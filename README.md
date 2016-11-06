@@ -1,25 +1,45 @@
 # tufte-pandoc-jekyll
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you
-need to be able to package up your theme into a gem. Put your layouts in
-`_layouts`, your includes in `_includes` and your sass in `_sass`. To experiment
-with this code, add some sample content and run `bundle exec jekyll serve` –
-this directory is setup just like a Jekyll site!
+This is a Jekyll theme for using Tufte CSS alongside `pandoc-sidenote`. It's
+based off of
 
-TODO: Delete this and the text above, and describe your gem
+- [Tufte CSS] for the original CSS file
+- [Tufte Pandoc CSS] uses Markdown in conjunction with Tufte CSS
+
+[Tufte CSS]: https://edwardtufte.github.io/tufte-css/
+[Tufte Pandoc CSS]: https://jez.io/tufte-pandoc-css/
+
+You may ask, "What's the difference between this and `tufte-jekyll`?"
+
+Using `pandoc-sidenote`, we don't have to use `{% sidenote %}...{% sidenote%}`
+and can instead just use `[^1]` like normal Pandoc markdown.
+
+For a demo, see `https://jez.io/talks`.
 
 ## Installation
 
-Add this line to your Jekyll site's Gemfile:
+There are two external dependencies in order to use this theme. You can install
+them through your package manager (like `apt-get` or `brew`):
+
+```
+# EXAMPLE: This is for macOS. Change if you're on Linux.
+brew install pandoc
+brew install pandoc-sidenote
+```
+
+Next, add this line to your Jekyll site's Gemfile:
 
 ```ruby
 gem "tufte-pandoc-jekyll"
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+And add these lines to your Jekyll site's `_config.yml`:
 
 ```yaml
 theme: tufte-pandoc-jekyll
+
+gems:
+  - jekyll-pandoc
 ```
 
 And then execute:
@@ -30,39 +50,62 @@ Or install it yourself as:
 
     $ gem install tufte-pandoc-jekyll
 
+
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes,
-and/or sass.
+> Note: while `tufte-pandoc-css` optionally includes the Solarized Light
+> colorscheme, it's enabled by default here, with no easy way to opt-out. This is
+> probably fine for you, but if it's not, feel free to make a PR that allows
+> opting out.
 
-Solarized Light enabled by default. No config to remove it right now.
+### Variables
 
-Variables:
+The following variables are used by this theme.
+
+- `site.title`
+- `site.author`
+  - Note that this theme currently only supports one author.
+- `site.baseurl`
+  - Make sure you don't have a trailing slash here
+- `site.header_includes`
+- `page.header_includes`
+  - You can use these to include raw HTML in the `<head>`
+- `site.include_after`
+- `page.include_after`
+  - You can use these to include raw HTML in the `<body>` before the content
+- `site.include_before`
+- `page.include_before`
+  - You can use these to include raw HTML in the `<body>` after the content
+- `page.layout`
+  - Pick one of `index`, `page`, or `post`
+  - `index` won't have a "Return home" link at the bottom of the page
+- `page.title`
+- `page.subtitle`
+- `page.date`
+- `page.keywords`
+- `page.math`
+  - If `true`, we'll include KaTeX for displaying math formulas
+
+### `_config.yml`
+
+You'll need to update your `_config.yml` to compile the site using Pandoc. Make
+sure you've followed the installation instructions.
 
 ```
-page.date
-page.header_includes
-page.include_after
-page.include_before
-page.keywords
-page.layout
-page.math
-page.subtitle
-page.title
-site.author
-site.baseurl
-site.header_includes
-site.include_after
-site.include_before
-site.title
+gems:
+  - jekyll-pandoc
+
+markdown: Pandoc
+pandoc:
+  extensions:
+    - section-divs
+    - from: 'markdown+tex_math_single_backslash'
+    - filter: 'pandoc-sidenote'
 ```
 
-Includes a 'Return home' link unless you use the layout 'index'. Otherwise: use
-'page' or 'post' (no difference).
+Optional: remove `section-divs` if you want to insert `<section>` tags manually.
 
 
 ## License
 
-The theme is available as open source under the terms of the [MIT
-License](http://opensource.org/licenses/MIT).
-
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://jez.io/MIT-LICENSE.txt)
