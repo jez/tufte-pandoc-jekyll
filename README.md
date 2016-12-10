@@ -24,7 +24,7 @@ them through your package manager (like `apt-get` or `brew`):
 ```
 # EXAMPLE: This is for macOS. Change if you're on Linux.
 brew install pandoc
-brew install pandoc-sidenote
+brew install jez/formulae/pandoc-sidenote
 ```
 
 Next, add this line to your Jekyll site's Gemfile:
