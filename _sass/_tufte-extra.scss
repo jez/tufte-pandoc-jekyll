@@ -5,3 +5,25 @@
 p.signoff { font-size: 1.2rem; }
 
 body { max-width: 1150px; }
+
+/*
+ * Proper wrapping for lists that occur outside of sections.
+ */
+section > ol,
+article > ol,
+section > ul {
+article > ul {
+  width: 45%;
+  -webkit-padding-start: 5%;
+  -webkit-padding-end: 5%;
+}
+
+@media (max-width: 760px) {
+  section > ol {
+  article > ol {
+  section > ul {
+  article > ul {
+    width: 85%;
+  }
+}
+
