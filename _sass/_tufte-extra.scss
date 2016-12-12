@@ -11,7 +11,7 @@ body { max-width: 1150px; }
  */
 section > ol,
 article > ol,
-section > ul {
+section > ul,
 article > ul {
   width: 45%;
   -webkit-padding-start: 5%;
@@ -19,9 +19,9 @@ article > ul {
 }
 
 @media (max-width: 760px) {
-  section > ol {
-  article > ol {
-  section > ul {
+  section > ol,
+  article > ol,
+  section > ul,
   article > ul {
     width: 85%;
   }
