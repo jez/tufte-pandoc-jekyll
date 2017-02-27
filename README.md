@@ -11,10 +11,10 @@ based off of
 
 You may ask, "What's the difference between this and `tufte-jekyll`?"
 
-Using `pandoc-sidenote`, we don't have to use `{% sidenote %}...{% sidenote%}`
+Using `pandoc-sidenote`, we don't have to use `{% sidenote %}...{% sidenote %}`
 and can instead just use `[^1]` like normal Pandoc markdown.
 
-For a demo, see `https://jez.io/talks`.
+For a demo, see <https://jez.io/talks/>.
 
 ## Installation
 
