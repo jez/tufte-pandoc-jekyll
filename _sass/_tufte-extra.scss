@@ -41,3 +41,8 @@ article {
       -ms-hyphens: auto;
           hyphens: auto;
 }
+/* Sidenotes end up with a bunch of hyphens because they're so small */
+.sidenote,
+.marginnote {
+  hyphens: none;
+}
