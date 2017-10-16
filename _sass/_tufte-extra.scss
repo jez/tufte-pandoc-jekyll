@@ -20,9 +20,8 @@ section > ol,
 article > ol,
 section > ul,
 article > ul {
-  width: 45%;
+  width: 50%;
   -webkit-padding-start: 5%;
-  -webkit-padding-end: 5%;
 }
 
 @media (max-width: 760px) {
@@ -30,7 +29,7 @@ article > ul {
   article > ol,
   section > ul,
   article > ul {
-    width: 85%;
+    width: 90%;
   }
 }
 
