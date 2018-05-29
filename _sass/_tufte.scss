@@ -97,8 +97,6 @@ section > p, section > footer, section > table { width: 55%; }
 section > ol, section > ul { width: 50%;
                              -webkit-padding-start: 5%; }
 
-li { padding: 0; }
-
 li:not(:first-child) { margin-top: 0.25rem; }
 
 figure { padding: 0;
@@ -227,7 +225,7 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
 @media (max-width: 760px) { body { width: 84%;
                                    padding-left: 8%;
                                    padding-right: 8%; }
-                            section > p, section > footer, section > table { width: 100%; }
+                            hr, section > p, section > footer, section > table { width: 100%; }
                             pre.code { width: 97%; }
                             section > ol { width: 90%; }
                             section > ul { width: 90%; }

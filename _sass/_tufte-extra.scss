@@ -14,26 +14,6 @@ p.signoff { font-size: 1.2rem; }
 body { max-width: 1150px; }
 
 /*
- * Proper wrapping for lists that occur outside of sections.
- */
-section > ol,
-article > ol,
-section > ul,
-article > ul {
-  width: 50%;
-  -webkit-padding-start: 5%;
-}
-
-@media (max-width: 760px) {
-  section > ol,
-  article > ol,
-  section > ul,
-  article > ul {
-    width: 90%;
-  }
-}
-
-/*
  * Enable hyphens on supported platforms
  */
 article {

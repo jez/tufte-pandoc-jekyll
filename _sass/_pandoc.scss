@@ -68,21 +68,9 @@ pre:not(.sourceCode) code {
   width: 100%;
 }
 
-/* We've handled all the margin/padding on the outer-most div.sourceCode */
-div.sourceCode pre {
-  padding: 0;
-  margin: 0;
-}
-
 @media (max-width: 760px) {
   div.sourceCode,
   pre:not(.sourceCode) {
     width: 100%;
   }
-}
-
-/* Pandoc-generated line numbers need the same stylings as normal <code> */
-.lineNumbers pre {
-  line-height: 1.42;
-  font-size: 0.9rem;
 }
