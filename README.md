@@ -23,6 +23,7 @@ them through your package manager (like `apt-get` or `brew`):
 
 ```
 # EXAMPLE: This is for macOS. Change if you're on Linux.
+# Note: you must have pandoc version 2.0 or greater
 brew install pandoc
 brew install jez/formulae/pandoc-sidenote
 ```
