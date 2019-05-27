@@ -19,6 +19,11 @@ body { max-width: 1150px; }
 article > p {
   width: 55%;
 }
+@media (max-width: 760px) {
+  article > p {
+    width: 100%;
+  }
+}
 
 /*
  * Enable hyphens on supported platforms
