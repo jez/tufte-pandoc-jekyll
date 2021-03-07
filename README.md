@@ -106,6 +106,19 @@ pandoc:
 
 Optional: remove `section-divs` if you want to insert `<section>` tags manually.
 
+## Developing
+
+To make a release:
+
+```bash
+vim tufte-pandoc-jekyll.gemspec
+git commit tufte-pandoc-jekyll.gemspec -m 'Bump version'
+git tag "$version"
+git push --tags origin master
+gem build tufte-pandoc-jekyll.gemspec
+gem push "tufte-pandoc-jekyll-$version.gem"
+```
+
 
 ## License
 
