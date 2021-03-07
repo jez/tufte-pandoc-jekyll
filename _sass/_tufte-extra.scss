@@ -16,8 +16,20 @@ body { max-width: 1150px; }
 /**
  * Makes it so that top-level <p> don't need to be wrapped in <section>
  */
-article > p {
-  width: 55%;
+article > p, article > footer, article > table { width: 55%; }
+
+/* 50 + 5 == 55, to be the same width as paragraph */
+article > ol, article > ul { width: 50%;
+                             -webkit-padding-start: 5%; }
+
+@media (max-width: 760px) {
+    article > p, article > footer, article > table {
+        width: 100%;
+    }
+
+    article > ol, article > ul {
+        width: 90%;
+    }
 }
 @media (max-width: 760px) {
   article > p {
