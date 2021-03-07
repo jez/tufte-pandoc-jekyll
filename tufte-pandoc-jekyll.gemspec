@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "tufte-pandoc-jekyll"
-  spec.version       = "0.11.3"
+  spec.version       = "0.11.4"
   spec.authors       = ["Jake Zimmerman"]
   spec.email         = ["zimmerman.jake@gmail.com"]
 
