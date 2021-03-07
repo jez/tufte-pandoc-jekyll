@@ -22,6 +22,16 @@ article > p, article > footer, article > table { width: 55%; }
 article > ol, article > ul { width: 50%;
                              -webkit-padding-start: 5%; }
 
+@media (max-width: 760px) {
+    article > p, article > footer, article > table {
+        width: 100%;
+    }
+
+    article > ol, article > ul {
+        width: 90%;
+    }
+}
+
 /*
  * Enable hyphens on supported platforms
  */
