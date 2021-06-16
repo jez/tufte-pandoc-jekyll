@@ -1,35 +1,44 @@
 /* The default x-height for code is slightly too large in side notes */
-.marginnote code,
-.sidenote code {
-  font-size: 0.9rem;
+.marginnote code, .sidenote code {
+    font-size: 0.9rem;
 }
-/* ... and slightly to small in body text. */
+/* ... and slightly too small in body text */
 code {
-  font-size: 1.1rem;
+    font-size: 1.05rem;
+}
+/* Also make the sidenote numbers hang */
+.sidenote {
+    text-indent: -0.4rem;
+}
+.sidenote:before {
+    /* removes trailing space from the counter content */
+    content: counter(sidenote-counter);
+    left: -0.4rem;
+}
+
+/* To get spacing between lists, use paragraphs.
+ * 0.25rem of spacing between list elements looks bad. */
+li:not(:first-child) {
+    margin-top: initial;
 }
 
 /* Make "Home" link small */
-p.signoff { font-size: 1.2rem; }
+p.signoff {
+    font-size: 1.2rem;
+}
 
-body { max-width: 1150px; }
+body {
+    max-width: 1150px;
+}
 
 /**
  * Makes it so that top-level <p> don't need to be wrapped in <section>
  */
-article > p, article > footer, article > table { width: 55%; }
-
-/* 50 + 5 == 55, to be the same width as paragraph */
-article > ol, article > ul { width: 50%;
-                             -webkit-padding-start: 5%; }
-
-@media (max-width: 760px) {
-    article > p, article > footer, article > table {
-        width: 100%;
-    }
-
-    article > ol, article > ul {
-        width: 90%;
-    }
+article > p,
+article > li,
+article > footer,
+article > table {
+    width: 55%;
 }
 
 /*
