@@ -62,8 +62,6 @@ match the style, features, and version numbering of
 - Use the OpenType `font-variant: tabular-nums` inside table cells.
 - Flush table cell contents top even if the cell has a `<p>` in it,
   while preserving spaces between paragraphs.
-- Use `<hr>` as a spacer and float-clearing device for those pesky edge
-  cases where things just won't stack nicely.
 - Pull the CSL styling already implemented in Tufte-Pandoc-CSS but not
   yet migrated to tufte-pandoc-jekyll.
 
