@@ -1,7 +1,3 @@
-* { font-variant: proportional-nums oldstyle-nums; }
-
-p.subtitle, h1, h2, h3 { font-variant: lining-nums; }
-
 details { @extend section;
           summary > p { display: inline; }
         }
