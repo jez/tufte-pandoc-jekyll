@@ -41,6 +41,7 @@ hr { border: 0;
      padding: 1.2rem 0; }
 
 // Dark colorscheme with a softer background
+// TODO: switch code to Solarized-dark when in dark mode
 @media (prefers-color-scheme: dark) {
   body { color: #fffff8;
          background-color: lighten(#111, 10%); }
