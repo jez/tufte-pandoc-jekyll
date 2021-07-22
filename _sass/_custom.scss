@@ -18,11 +18,7 @@ article > dl, section > dl { clear: left;
 
 dt, h5, h6 { float: left;
              margin: 0 1.4rem 0 0;
-             padding: 0;
-             line-height: 1.5rem; }
-
-// Fix some edge conditions:
-//h5, h6, li > dl > dt, dl > dt:first-of-type { line-height: 2rem; }
+             padding: 0; }
 
 // Tabular numbers for list items, small-caps Roman numerals
 article ol, article ul {
@@ -43,10 +39,6 @@ p~figure > img.marginnote, div.notes~figure > img.marginnote { margin-top: 1.6re
 hr { border: 0;
      clear: both;
      padding: 1.2rem 0; }
-
-// Outset dates in résumé
-.cv dt { font-variant: tabular-nums oldstyle-nums all-small-caps;
-         margin-left: -8.5rem; }
 
 // Dark colorscheme with a softer background
 @media (prefers-color-scheme: dark) {
