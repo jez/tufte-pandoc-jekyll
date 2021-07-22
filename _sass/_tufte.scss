@@ -144,7 +144,8 @@ blockquote footer {
 
 section > p,
 section > footer,
-section > table {
+section > table,
+section > div > table {
     width: 55%;
 }
 
@@ -156,10 +157,12 @@ section > ul {
     -webkit-padding-start: 5%;
 }
 
-dt:not(:first-child),
-li:not(:first-child) {
-    margin-top: 0.25rem;
-}
+/* Causes problems with run-in <dt>
+ *dt:not(:first-child),
+ *li:not(:first-child) {
+ *    margin-top: 0.25rem;
+ *}
+ */
 
 figure {
     padding: 0;
