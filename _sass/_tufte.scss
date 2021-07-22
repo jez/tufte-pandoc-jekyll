@@ -138,6 +138,8 @@ figcaption { float: right;
              position: relative;
              max-width: 40%; }
 
+figure.fullwidth figcaption { margin-right: 24%; }
+
 div.fullwidth figcaption { max-width: 33%; }
 
 /* Links: replicate underline that clears descenders */
