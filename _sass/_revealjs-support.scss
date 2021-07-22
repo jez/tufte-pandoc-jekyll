@@ -1,0 +1,42 @@
+// Reveal.js uses <h2> to make new slides. Typically, we will
+// have Pandoc shift these headings when generating a regular
+// web page, so they become <h3>. Headings that use the
+// .unlisted class may have no title and are there just to
+// provide a background-image in reveal.js. Therefore, we don't
+// want them to add unnecessary vertical space and just suppress
+// them completely.
+// Comment this line out if this is not the behavior you expect.
+h3.unlisted { display: none; }
+
+// Similarly, we might be using <hr> to start a new slide and
+// therefore might not want it to show up at all in the text.
+// Uncomment this line if you want to suppress it.
+// hr { display: none; }
+
+// Align Reveal.js presenter notes as regular paragraphs.
+// Alternatively, uncomment the second line to hide them completely.
+div.notes { @extend section;
+            //display: none !important;
+          }
+
+// Right now .r-stack figures are hard-coded to show up
+// in two equal columns.
+div.r-stack > figure { float: left;
+                       max-width: 50%;
+                       & > figcaption { float: none;
+                                        max-width: 100%;
+                                        width: 100%; }
+                     }
+
+// Support Pandoc columns for reveal.js
+.columns { @extend .fullwidth;
+           width: 100%;
+           &.subfigures > p:last-of-type { max-width: 33%;
+                                           margin-bottom: 1.1rem; }
+         }
+.column  { float: left;
+           figure { margin-bottom: 1em;
+                    max-width: 90%;
+                    figcaption { float: right; }
+                  }
+         }
