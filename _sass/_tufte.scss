@@ -105,8 +105,6 @@ blockquote footer { width: 55%;
 
 section > p, section > footer, section > table, section > div > table { width: 55%; }
 
-table > caption { margin-top: 1.1rem; }
-
 /* 50 + 5 == 55, to be the same width as paragraph */
 section > ol, section > ul { width: 50%;
                              -webkit-padding-start: 5%; }
