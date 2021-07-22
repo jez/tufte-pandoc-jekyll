@@ -125,12 +125,10 @@ Or install it yourself as:
 
 ## Usage
 
-<!--
-   -> Note: while `tufte-pandoc-css` optionally includes the Solarized Light
-   -> colorscheme, it's enabled by default here, with no easy way to opt-out. This is
-   -> probably fine for you, but if it's not, feel free to make a PR that allows
-   -> opting out.
-   -->
+> Note: while `tufte-pandoc-css` optionally includes the Solarized Light
+> colorscheme, it's enabled by default here, with no easy way to opt-out. This is
+> probably fine for you, but if it's not, feel free to make a PR that allows
+> opting out.
 
 ### Variables
 
