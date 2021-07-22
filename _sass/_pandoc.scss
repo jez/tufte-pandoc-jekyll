@@ -20,16 +20,26 @@ p.byline { font-size: 1.2rem; }
 
 /* Simulate Pandoc's table output styles */
 table {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border-collapse: collapse;
+  border-top: 2px solid #111111;
+  border-bottom: 2px solid #111111;
+  caption {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
 }
 th {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #111111;
 }
 td, th {
   font-size: 1.4rem;
+  font-variant: tabular-nums;
   padding: 10px;
   text-align: left;
+  & > p {
+    margin-top: 0;
+  }
 }
 
 /* Allow tables to be full width
@@ -66,6 +76,12 @@ pre:not(.sourceCode) code {
 .fullwidth div.sourceCode,
 .fullwidth pre:not(.sourceCode) {
   width: 100%;
+}
+
+// Line blocks (e.g. for poetry)
+.line-block {
+  font-size: 1.4rem;
+  line-height: 2rem;
 }
 
 @media (max-width: 760px) {

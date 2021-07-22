@@ -7,6 +7,10 @@
   "tufte",
   "tufte-extra",
   "pandoc",
-  "pandoc-solarized"
+  "pandoc-solarized",
+  "custom"
 ;
 
+// Reveal.js support is not enabled by default.
+// Uncomment the line below to enable it.
+//@import "revealjs-support" ;
