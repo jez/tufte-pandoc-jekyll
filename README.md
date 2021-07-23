@@ -1,4 +1,4 @@
-# tufte-crossref-jekyll
+# tufte-pandoc-jekyll
 
 This is a Jekyll theme for using Tufte CSS alongside `pandoc-sidenote`. It's
 based off of
@@ -16,13 +16,11 @@ and can instead just use `[^1]` like normal Pandoc markdown.
 
 For a demo, see <https://jez.io/talks/>.
 
-## Features specific to tufte-crossref-jekyll
+## Features
 
-This fork introduces some changes to the style sheets that are meant to
-provide support for using **tufte-pandoc-jekyll** alongside
-[Pandoc-crossref]. Otherwise, this project attempts to
-match the style, features, and version numbering of
-**tufte-pandoc-jekyll**. In short what it does is to:
+This version introduces some changes to the style sheets that are meant
+to provide support for using **tufte-pandoc-css** alongside
+[Pandoc-crossref].
 
 [Pandoc-crossref]: https://lierdakil.github.io/pandoc-crossref/
 
@@ -86,9 +84,9 @@ line.
 
 :warning: The Reveal.js support does *not* affect slide output in any
 way and you should *not* point your slide presentation to the styles in
-the **tufte-crossref-jekyll** theme. These features are meant to
-normalize the appearance of the *text* version of your page when it
-contains markup that will *also* be used for slide output.
+the **tufte-pandoc-jekyll** theme. These features are meant to normalize
+the appearance of the *text* version of your page when it contains
+markup that will *also* be used for slide output.
 
 ## Installation
 
@@ -105,13 +103,13 @@ brew install jez/formulae/pandoc-sidenote
 Next, add this line to your Jekyll site's Gemfile:
 
 ```ruby
-gem "tufte-crossref-jekyll"
+gem "tufte-pandoc-jekyll"
 ```
 
 And add these lines to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: tufte-crossref-jekyll
+theme: tufte-pandoc-jekyll
 
 gems:
   - jekyll-pandoc
@@ -123,7 +121,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install tufte-crossref-jekyll
+    $ gem install tufte-pandoc-jekyll
 
 
 ## Usage
