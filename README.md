@@ -41,6 +41,7 @@ match the style, features, and version numbering of
   figures with captions, by using pandoc-crossref `.subfigures` syntax
   (results may be unexpected in some cases).
 - Make `<video>` behave the same as `<img>`.
+- Provide sensible formatting for collapsible `<details>` blocks.
 
 ### Alignments and typography ###
 
@@ -65,25 +66,29 @@ match the style, features, and version numbering of
 - Pull the CSL styling already implemented in Tufte-Pandoc-CSS but not
   yet migrated to tufte-pandoc-jekyll.
 
-<!--
-   -### Reveal.js and bonus features ###
-   -
-   -The following tweaks allow you to use the same Markdown file as a base
-   -for a regular web page and for a Reveal.js slideshow. These features are
-   -not enabled by default. To enable then, check out `assets/css/main.scss`
-   -from the theme files and uncomment the `@import "revealjs-support" ;`
-   -line.
-   -
-   -- Provide basic support for Reveal.js columns (only two equal or unequal
-   -  columns work well for now; for further details, see the
-   -  [Pandoc docs](https://pandoc.org/MANUAL.html#columns)).
-   -- Correct the width of *speaker notes* and *incremental* blocks used by
-   -  Reveal.js to match that of regular paragraph text.
-   -- Enable support for collapsible `<details>` blocks.
-   -- Provide a dark color scheme based on a softened inversion of the main
-   -  colors as well as the solarized dark scheme for code.
-   -
-   -->
+### Reveal.js and bonus features ###
+
+The following tweaks allow you to use the same Markdown file as a base
+for a regular web page and for a Reveal.js slideshow. These features are
+not enabled by default. To enable then, check out `assets/css/main.scss`
+from the theme files and uncomment the `@import "revealjs-support" ;`
+line.
+
+- Provide basic support for Reveal.js columns (only two equal or unequal
+  columns work well for now; for further details, see the
+  [Pandoc docs](https://pandoc.org/MANUAL.html#columns)).
+- Correct the width of *speaker notes* and *incremental* blocks used by
+  Reveal.js to match that of regular paragraph text.
+- Provide a dark color scheme based on a softened inversion of the main
+  colors as well as the solarized dark scheme for code.
+- A blank `_local.scss` file for any customization you might want to
+  make.
+
+:warning: The Reveal.js support does *not* affect slide output in any
+way and you should *not* point your slide presentation to the styles in
+the **tufte-crossref-jekyll** theme. These features are meant to
+normalize the appearance of the *text* version of your page when it
+contains markup that will *also* be used for slide output.
 
 ## Installation
 
