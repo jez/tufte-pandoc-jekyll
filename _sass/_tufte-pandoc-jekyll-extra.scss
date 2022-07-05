@@ -1,0 +1,34 @@
+/* --- Styles specific to tufte-pandoc-jekyll --- */
+
+/* Make "Home" link small */
+p.signoff {
+    font-size: 1.2rem;
+}
+
+body {
+    max-width: 1150px;
+}
+
+/**
+ * Makes it so that top-level <p> don't need to be wrapped in <section>
+ */
+article > p,
+article > li,
+article > footer,
+article > table {
+    width: 55%;
+}
+
+/*
+ * Enable hyphens on supported platforms
+ */
+article {
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+/* Sidenotes end up with a bunch of hyphens because they're so small */
+.sidenote,
+.marginnote {
+  hyphens: none;
+}
