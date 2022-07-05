@@ -2,10 +2,12 @@
 .marginnote code, .sidenote code {
     font-size: 0.9rem;
 }
+
 /* ... and slightly too small in body text */
 code {
     font-size: 1.05rem;
 }
+
 /* Also make the sidenote numbers hang */
 .sidenote {
     text-indent: -0.4rem;
@@ -20,4 +22,31 @@ code {
  * 0.25rem of spacing between list elements looks bad. */
 li:not(:first-child) {
     margin-top: initial;
+}
+
+/* Prevent superscripts and subscripts from affecting line-height */
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+sub {
+    top: 0.4em;
+}
+
+/* Replicate styling from sidenote numbers to footnote numbers */
+a.footnote-ref {
+    background: unset;
+    text-shadow: unset;
+    font-size: 1rem;
+    position: relative;
+    top: -0.1rem;
+    left: 0.1rem;
+    display: inline;
+}
+.footnote-ref sup {
+    font-family: et-book-roman-old-style;
+    font-size: inherit;
+    vertical-align: inherit;
+    line-height: inherit;
 }
